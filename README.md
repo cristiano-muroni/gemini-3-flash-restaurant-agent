@@ -1,6 +1,6 @@
-# LG Restaurant Agent - Interface Conversacional 🥘
+# Gemini Restaurant Agent - Interface Conversacional 🥘
 
-Este projeto é uma interface de atendimento virtual inteligente para o **LG Restaurante**, especializado na venda de marmitex. Ele utiliza a **IA Gemini (Google)** para conduzir o fluxo de pedidos de forma orgânica e acolhedora.
+Este projeto é uma interface de atendimento virtual inteligente para o **Gemini Restaurante**, especializado na venda de marmitex. Ele utiliza a **IA Gemini (Google)** para conduzir o fluxo de pedidos de forma orgânica e acolhedora.
 
 ![Preview](https://ais-dev-7ldcc2hc7qpqluzzbqg5zx-703264893181.us-east1.run.app/favicon.ico) <!-- Placeholder link or icon -->
 
@@ -32,8 +32,8 @@ Este projeto é uma interface de atendimento virtual inteligente para o **LG Res
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/lg-restaurant-agent.git
-cd lg-restaurant-agent
+git clone https://github.com/cristiano-muroni/gemini-3-flash-restaurant-agent.git
+cd gemini-3-flash-restaurant-agent
 ```
 
 2. Crie um arquivo `.env` na raiz:
