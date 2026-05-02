@@ -2,7 +2,9 @@
 
 Este projeto é uma interface de atendimento virtual inteligente para o **Gemini Restaurante**, especializado na venda de marmitex. Ele utiliza a **IA Gemini (Google)** para conduzir o fluxo de pedidos de forma orgânica e acolhedora.
 
-<video src="https://github.com/user-attachments/assets/a9658c38-7b67-480e-93b1-325a5c316196" width="100%" controls></video>
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/a9658c38-7b67-480e-93b1-325a5c316196" width="80%" autoplay loop muted playsinline></video>
+</div>
 
 ## 🚀 Funcionalidades
 
