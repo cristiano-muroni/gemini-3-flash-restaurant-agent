@@ -10,16 +10,16 @@ O Gemini Restaurant Agent é uma versão semelhante do "lg-restaurant-agent". A 
 Vamos testar e provar que é possível criar a experiência de um fluxo conversacional com estados, contanto somente com a evolução atual das IAs e do desenvolvimento de agentes. Vamos analisar os motivos técnicos e de design:
 
 1. **Instruções de Sistema (System Instructions) vs. Grafos Rígidos**
-No seu projeto original, o LangGraph é usado para criar um "mapa" explícito (Nós e Arestas). Isso é ótimo para fluxos extremamente complexos e não lineares, mas para um atendimento de restaurante que é majoritariamente linear (Saudação → Pedido → Endereço → Fim), ele pode adicionar uma camada de complexidade desnecessária.
-O que eu fiz: Usei o recurso nativo de System Instruction do Gemini. Modelos modernos como o Gemini 1.5 e 2.0 são excepcionalmente bons em seguir "scripts" textuais. Ao definir as 4 etapas claramente no prompt, a própria IA atua como o "orquestrador do grafo" internamente. Ela entende contextualmente em qual fase está sem que precisemos "forçar" a transição de um código para outro.
+    No seu projeto original, o LangGraph é usado para criar um "mapa" explícito (Nós e Arestas). Isso é ótimo para fluxos extremamente complexos e não lineares, mas para um atendimento de restaurante que é majoritariamente linear (Saudação → Pedido → Endereço → Fim), ele pode adicionar uma camada de complexidade desnecessária.
+    O que eu fiz: Usei o recurso nativo de System Instruction do Gemini. Modelos modernos como o Gemini 1.5 e 2.0 são excepcionalmente bons em seguir "scripts" textuais. Ao definir as 4 etapas claramente no prompt, a própria IA atua como o "orquestrador do grafo" internamente. Ela entende contextualmente em qual fase está sem que precisemos "forçar" a transição de um código para outro.
 
 2. **Function Calling como Gatilho de Estado**
-Em vez de criar um nó no LangGraph chamado validate_cep, eu usei o Function Calling.
-A IA decide sozinha: "O usuário me deu um CEP, eu preciso chamar a ferramenta de validação agora".
-Isso torna o fluxo mais fluido, porque se o usuário mudar de ideia no meio do endereço e perguntar algo sobre uma marmita, a IA consegue lidar com isso sem "quebrar" a lógica do nó do grafo.
+    Em vez de criar um nó no LangGraph chamado validate_cep, eu usei o Function Calling.
+    A IA decide sozinha: "O usuário me deu um CEP, eu preciso chamar a ferramenta de validação agora".
+    Isso torna o fluxo mais fluido, porque se o usuário mudar de ideia no meio do endereço e perguntar algo sobre uma marmita, a IA consegue lidar com isso sem "quebrar" a lógica do nó do grafo.
 
-3. **Histórico como Estado (User State)**
-No React, o estado da conversa é mantido no array de messages. Toda vez que enviamos uma mensagem, mandamos o histórico completo. Como o Gemini tem uma janela de contexto enorme e alta precisão, ele lê o histórico e "se situa": "Ah, eu já mostrei o cardápio e ele já escolheu a Marmitex Premium, agora falta o telefone".
+    3. **Histórico como Estado (User State)**
+    No React, o estado da conversa é mantido no array de messages. Toda vez que enviamos uma mensagem, mandamos o histórico completo. Como o Gemini tem uma janela de contexto enorme e alta precisão, ele lê o histórico e "se situa": "Ah, eu já mostrei o cardápio e ele já escolheu a Marmitex Premium, agora falta o telefone".
 
 ## 🚀 Funcionalidades
 
