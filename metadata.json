@@ -1,0 +1,6 @@
+{
+  "name": "LG Restaurant Agent",
+  "description": "A conversational AI assistant for ordering marmitex, featuring menu navigation, order collection, and address validation with a polished chat experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
