@@ -18,7 +18,7 @@ Vamos testar e provar que é possível criar a experiência de um fluxo conversa
     A IA decide sozinha: "O usuário me deu um CEP, eu preciso chamar a ferramenta de validação agora".
     Isso torna o fluxo mais fluido, porque se o usuário mudar de ideia no meio do endereço e perguntar algo sobre uma marmita, a IA consegue lidar com isso sem "quebrar" a lógica do nó do grafo.
 
-    3. **Histórico como Estado (User State):**
+3. **Histórico como Estado (User State):**
     No React, o estado da conversa é mantido no array de messages. Toda vez que enviamos uma mensagem, mandamos o histórico completo. Como o Gemini tem uma janela de contexto enorme e alta precisão, ele lê o histórico e "se situa": "Ah, eu já mostrei o cardápio e ele já escolheu a Marmitex Premium, agora falta o telefone".
 
 ## 🚀 Funcionalidades
